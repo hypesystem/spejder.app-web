@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spejder.app</title>
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,700" rel="stylesheet"> 
+        <style type="text/css">
+            body {
+                font-family: 'Titillium Web', sans-serif;
+                background: #12327c;
+                color: #e8e8e8;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                justify-content: space-between;
+                align-items: center;
+            }
+            header {
+                position: sticky;
+                top: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background: inherit;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                width: 100%;
+                z-index: 100;
+            }
+            header:after {
+                content: '';
+                background: rgba(0,0,0,0.1);
+                height: 1px;
+                position: absolute;
+                left: 30px;
+                right: 30px;
+                bottom: -1px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+            }
+            header .logo {
+                font-size: 1.4em;
+                color: #e8e8e8;
+                text-decoration: inherit;
+                padding: 2px 15px;
+                margin-left: 15px;
+                font-weight: 600;
+            }
+            header nav {
+                display: flex;
+                flex-direction: row;
+                margin-right: 15px;
+            }
+            header nav a {
+                color: #e8e8e8;
+                text-decoration: none;
+                font-size: 1em;
+                padding: 1.2em;
+                box-sizing: border-box;
+            }
+
+            main.pitch-page {
+                padding: 75px 0;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-around;
+            }
+            section.column {
+                margin: 30px;
+                flex-basis: 50%;
+                max-width: 700px;
+            }
+
+            section.attention-grab {
+                position: relative;
+                top: -10px;
+            }
+            section.attention-grab h1 {
+                font-size: 2.5em;
+                font-weight: 400;
+                margin: 0;
+            }
+            section.attention-grab h2 {
+                font-weight: 400;
+                color: rgb(200, 200, 200);
+                width: 70%;
+            }
+            section.attention-grab p {
+                width: 70%;
+            }
+            a {
+                color: inherit;
+            }
+            section.content {
+                width: 70%;
+                margin: 25px 0;
+            }
+            section.content p {
+                margin: 0 0 1em;
+            }
+            section.content h1 {
+                margin: 3em 0 1em;
+            }
+
+            section.signup {
+                background: rgb(200, 200, 200);
+                color: rgb(25, 25, 25);
+                padding: 20px;
+                box-sizing: border-box;
+                margin: 40px 0;
+                font-size: 1.25em;
+            }
+
+            .signup-box {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+            .signup-box .signup-box-column {
+                flex-basis: 50%;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+            .signup-box label {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0;
+            }
+            .signup-box label span {
+                font-size: 0.7em;
+                font-weight: bold;
+            }
+            .signup-box .checkbox-question {
+                display: block;
+                font-size: 0.8em;
+                margin: 20px 0 0;
+            }
+            .signup-box label.checkbox-option {
+                flex-direction: row;
+                margin: 0;
+            }
+            .signup-box label.checkbox-option span {
+                font-weight: normal;
+            }
+            .signup-box input[type=text], .signup-box input[type=email] {
+                padding: 5px;
+                font-size: 0.75em;
+                font-family: inherit;
+            }
+
+            .signup-box button {
+                margin: 10px;
+                width: 100%;
+                padding: 20px;
+                background: #11767c;
+                border: none;
+                color: rgb(230, 230, 230);
+                font-family: inherit;
+                font-size: 0.95em;
+                box-shadow: 0 0 2px rgba(0,0,0,0.4), 0 2px 3px rgba(0,0,0,0.4);
+                cursor: pointer;
+                transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+            }
+            .signup-box button:hover {
+                color: rgb(245, 245, 245);
+                background: #128087;
+                box-shadow: 0 0 3px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.4);
+            }
+
+            footer {
+                border-top: 1px solid white;
+                padding: 15px;
+                font-size: 0.8em;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="/" class="logo">Spejder.app</a>
+            <nav>
+                <a href="mailto:kontakt@maerkelex.dk">Kontakt</a>
+            </nav>
+        </header>
+        <main class="pitch-page">
+            <section class="column">
+                <section class="attention-grab">
+                    <h1>Vi bygger bedre IT til spejdergrupper!</h1>
+                    <h2>Lige nu kan du skrive dig op som betatester af et bedre system til spejderhjemmesider, eller til en huskeliste der tager sig af det svære.</h2>
+                    <p>
+                        <a href="https://museum.soeborggruppe.dk" target="_blank" rel="noopener">1. Søborg Gruppes hjemmeside</a> er et eksempel på en hjemmeside der bruger vores system.
+                    </p>
+                </section>
+                <section class="signup">
+                    <p>
+                        <strong>Interesseret?</strong>
+                        Hjemmesidesystemet kommer til at koste 100 kr pr. gruppe pr. måned, men du får det gratis i test-perioden, hvis du melder dig som tester.
+                        Derudover får du 20% rabat, når systemet endeligt lanceres.
+                    </p>
+                    <form class="signup-box">
+                        <div class="signup-box-column">
+                            <label>
+                                <span>Fornavn</span>
+                                <input type="text" name="firstName" placeholder="Jens">
+                            </label>
+                            <label>
+                                <span>Efternavn</span>
+                                <input type="text" name="lastName" placeholder="Holger">
+                            </label>
+                            <label>
+                                <span>Email</span>
+                                <input type="email" name="email" placeholder="jens.holger@spejdergruppe.dk">
+                            </label>
+                        </div>
+                        <div class="signup-box-column">
+                            <label>
+                                <span>Spejdergruppe</span>
+                                <input type="text" name="groupName" placeholder="Spejdergruppe, Det Danske Spejderkorps">
+                            </label>
+                            <div>
+                                <span class="checkbox-question">Hvilke systemer er du interesseret i at teste?</span>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="interestedInWebsite" checked>
+                                    <span>Hjemmesidesystem</span>
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="interestedInHuskeliste">
+                                    <span>Huskeliste</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit">Ansøg om at blive tester</button>
+                    </form>
+                </section>
+                <section class="content">
+                    <h1>Et system der bliver bedre og bedre</h1>
+                    <p>
+                        Vores tilgang til Spejder.app er ikke som et projekt der skal afsluttes.
+                        Vi er selv spejdere, og bygger software der skal gøre det nemmere at være spejder i Danmark.
+                        Derfor bliver vi ved med at arbejde på og forbedre systemet.
+                    </p>
+                    <p>
+                        Når vi bygger software sørger vi for at lytte til vores brugere, nemlig spejderledere.
+                        Vores fokus er på at gøre livet som spejderleder nemmere, ved automatisk at løse mange af de kedelige administrationsopgaver, så der er mere tid til oplevelser og udfordringer.
+                    </p>
+                    <p>
+                        Som bruger af systemet får du direkte indflydelse på hvilke behov vi skal dække, og hvordan vores prioriteter ser ud.
+                        Du er med til at bestemme hvilke problemer der er vigtigst, og som vi derfor løser først.
+                    </p>
+                </section>
+                <section class="content">
+                    <h1>Der kommer mere til&hellip;</h1>
+                    <p>
+                        Når vi udvikler nye løsninger, sørger vi for at gøre dem nemt tilgængelige og integrere dem pænt med vores eksisterende tilbud.
+                        Derfor bliver din hjemmeside bedre og bedre med tiden.
+                        Her er nogle af de udvidelser vi har planer om at bygge i fremtiden:
+                    </p>
+                    <p>
+                        En <strong>Huskeliste</strong> (+25 kr/grp/md) der automatisk minder folk om de opgaver de har taget på sig, hjælper med opfølgning, og gør det nemmere at holde effektive ledergruppe- og bestyrelsesmøder.
+                    </p>
+                    <p>
+                        En <strong>Webshop</strong> (+100 kr/grp/md) til hjemmesiden, hvis man ønsker at sælge mærker, logovarer eller andet.
+                    </p>
+                    <p>
+                        En <strong>offline kontaktbog til mobiltelefoner</strong> (gratis) så du nemt kan finde kontaktoplysninger på spejderne, selv når du står i en svensk skov med dårlig internetdækning.
+                    </p>
+                    <p>
+                        En <strong>venteliste</strong> (+50 kr/grp/md) der lader dig styre reglerne for optag, og endda hjælper med selve optagelsesprocessen, ved at kontakte det rigtige antal personer fra hver årgang du optager i.
+                    </p>
+                    <p>
+                        Et system til <strong>bedre halvårsprogrammer</strong> (gratis), så de nemt kan ses online og printes, og så ledere, spejdere og forældre automatisk kan få at vide når der sker ændringer i programmet.
+                    </p>
+                    <p>
+                        Et brugerflow der gør det <strong>nemmere at trække lister fra Medlemsservice</strong> (endnu ikke prissat), og gør det muligt at lave lister der indeholder lige præcis den information man oftest har brug for.
+                    </p>
+                    <p>
+                        En <strong>stregliste</strong> (5 kr/grp/md) til klanspejdere, ledere og bestyrelsesmedlemmer, så man ikke skal have penge op af lommen hver gang man tager en sodavand til et møde.
+                    </p>
+                </section>
+                <section class="artsy-fartsy" style="text-align: center; margin-top: 200px; width: 70%;">
+                    <div style="background: rgb(200, 200, 200); border-radius: 0 100%; height: 50px; width: 50px; transform: rotate(20deg); display: inline-block;"></div>
+                </section>
+            </section>
+            <section class="column">
+                <section class="content">
+                    <h1>Fuld kontrol</h1>
+                    <p>
+                        Med vores system får du fuld kontrol over din hjemmeside.
+                        Alt kan ændres og udvides, og fif kan udveksles mellem grupperne, så man hurtigt kan få en funktionel og effektiv hjemmeside.
+                        Du kan bygge din helt egen forside, uden begrænsninger.
+                    </p>
+                    <p>
+                        Systemet er lavet så alle kan være med &ndash; så selv hvis man ikke er ekspert, kan man være med til at vedligeholde gruppens hjemmeside, ved at rette i, slette, og lave nyt indhold.
+                    </p>
+                </section>
+                <section class="content">
+                    <h1>En bedre kalender</h1>
+                    <p>
+                        Med hjemmesidesystemets kalender er du ikke fanget i Medlemsservice.
+                        Du har fuld kontrol over hvilke begivenheder der fremgår.
+                        Du kan have begivenheder hvor tilmelding er via Medlemsservice, men du kan også have begivenheder der linker til helt andre sider.
+                    </p>
+                    <p>
+                        Kalenderen er også tilgængelig som iCal feed, så den kan synkroniseres automatisk med ledere og spejderes elektroniske kalendre.
+                        iCal-kalenderen kommer med links, så det er nemt at bevæge sig mellem sin egen elektroniske kalender og de handlinger man kan foretage sig på eventet.
+                    </p>
+                </section>
+                <section class="content">
+                    <h1>Hurtigere og stærkere</h1>
+                    <p>
+                        Med hjemmesidesystemet har vi fokuseret på at bruge teknologier der sikrer en god brugeroplevelse.
+                        Der er intet værre end langsomme systemer.
+                    </p>
+                    <p>
+                        Hjemmesidesystemet bliver bygget som statiske filer.
+                        Det betyder at hver gang der laves en ændring, forberedes hele hjemmesiden.
+                        Når en bruger besøger siden skal der derfor ikke bruges nogen tid på at finde det rigtige svar &ndash; det kender siden allerede.
+                    </p>
+                    <p>
+                        Vi lægger vores statiske filer på <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify CDN</a>, som er et multi-cloud content delivery network.
+                        Det er en masse avancerede ord, der betyder at de har bedre tilgængelighed end Amazon eller Microsoft eller Google alene, og samtidig sørger for at have servere tæt på dem der besøger jeres hjemmeside, ligemeget hvor i verden de er.
+                        Så får man nemlig hurtigere svar, og jeres side giver et bedre indtryk.
+                    </p>
+                    <p>
+                        Sikkerhed er vigtigt, og selvfølgelig sørger vi for at alt er i orden.
+                        Det betyder f.eks. at forbindelser til hjemmesiderne foregår krypteret.
+                        Samtidig sørger vi for at vi ikke samler for meget data, når vi f.eks. holder øje med hvor mange besøgende der kommer på jeres hjemmeside.
+                        Vi overholder GDPR-lovgivningen, uden at gå på kompromis med jeres overblik over jeres side.
+                    </p>
+                </section>
+                <section class="content">
+                    <h1>Kør din egen version, hvis du vil</h1>
+                    <p>
+                        Vi tror på Open Source, altså at kildekoden til de programmer vi skriver skal være offentligt tilgængelig.
+                        Så du kan køre din egen version af vores systemer, og kun afholde udgifter til hosting.
+                        (Det kræver dog en del softwareudviklingserfaring at sætte op.)
+                    </p>
+                    <p>
+                        Det skal siges at vi sætter priserne så det ikke burde kunne betale sig at køre sin egen version, slet ikke hvis man tæller timeløn på opsætning.
+                        Det er dog vigtigt for os at den software vi bygger ikke går tabt bare fordi vi stopper projektet.
+                        Derfor er koden tilgængelig.
+                    </p>
+                </section>
+                <section class="content">
+                    <h1>Du får se hvad pengene går til</h1>
+                    <p>
+                        Vi kommer til at køre hele projektet med meget gennemsigtig økonomi.
+                        Jovist tager vi penge for noget, men de kommer allesammen til at blive investeret så effektivt som muligt i udvikling af IT til spejdere eller andre frivillige organisationer.
+                    </p>
+                    <p>
+                        For at opbygge tillid med jer, vores brugere, kommer vi til løbende at fortælle hvordan pengene bliver brugt, så I kan se præcis hvor meget af vores indtægter der går til driftsomkostninger, vedligehold og nyudvikling.
+                    </p>
+                </section>
+                <section class="signup">
+                        <p>
+                            <strong>Vær med til at skabe en fremtid hvor IT ikke gør ondt, og hvor der er mere tid til det vigtige i spejderarbjedet.</strong>
+                            Det er gratis for din gruppe at være med i testperioden.
+                        </p>
+                        <form class="signup-box">
+                            <div class="signup-box-column">
+                                <label>
+                                    <span>Fornavn</span>
+                                    <input type="text" name="firstName" placeholder="Jens">
+                                </label>
+                                <label>
+                                    <span>Efternavn</span>
+                                    <input type="text" name="lastName" placeholder="Holger">
+                                </label>
+                                <label>
+                                    <span>Email</span>
+                                    <input type="email" name="email" placeholder="jens.holger@spejdergruppe.dk">
+                                </label>
+                            </div>
+                            <div class="signup-box-column">
+                                <label>
+                                    <span>Spejdergruppe</span>
+                                    <input type="text" name="groupName" placeholder="Spejdergruppe, Det Danske Spejderkorps">
+                                </label>
+                                <div>
+                                    <span class="checkbox-question">Hvilke systemer er du interesseret i at teste?</span>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="interestedInWebsite" checked>
+                                        <span>Hjemmesidesystem</span>
+                                    </label>
+                                    <label class="checkbox-option">
+                                        <input type="checkbox" name="interestedInHuskeliste">
+                                        <span>Huskeliste</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit">Ansøg om at blive tester</button>
+                        </form>
+                </section>
+            </section>
+        </main>
+        <footer>
+            Spejder.app &copy; Mærkelex IVS 2018
+        </footer>
+    </body>
+</html>
