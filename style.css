@@ -46,18 +46,6 @@ header nav {
     flex-direction: row;
     margin-right: 15px;
 }
-@media (max-width: 400px) {
-    header:after {
-        left: 15px;
-        right: 15px;
-    }
-    header .logo {
-        margin-left: 0;
-    }
-    header nav {
-        margin-right: 0;
-    }
-}
 header nav a {
     color: #e8e8e8;
     text-decoration: none;
@@ -82,7 +70,7 @@ section.column {
 .column img {
     max-width: 100%;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     main.pitch-page {
         flex-wrap: wrap;
     }
@@ -106,6 +94,26 @@ section.attention-grab h1 {
     margin: 0;
     margin-bottom: 4.25rem;
     line-height: 1;
+}
+@media (max-width: 1350px) {
+    section.attention-grab h1 {
+        font-size: 7em;
+    }
+}
+@media (max-width: 1150px) {
+    section.attention-grab h1 {
+        font-size: 6em;
+    }
+}
+@media (max-width: 500px) {
+    section.attention-grab h1 {
+        font-size: 4.5em;
+    }
+}
+@media (max-width: 400px) {
+    section.attention-grab h1 {
+        font-size: 3.5em;
+    }
 }
 section.attention-grab h2 {
     font-weight: 400;
