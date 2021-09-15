@@ -79,6 +79,9 @@ section.column {
     flex-basis: 50%;
     max-width: 700px;
 }
+.column img {
+    max-width: 100%;
+}
 @media (max-width: 800px) {
     main.pitch-page {
         flex-wrap: wrap;
