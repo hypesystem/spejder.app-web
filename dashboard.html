@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spejder.app</title>
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,700" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body class="spejder-app">
+        <nav class="menu">
+            <header class="menu__header theme-background-color">
+                <a class="menu__header-link" href="/group">1. Søborg Gruppe</a>
+                <a class="menu__header-link" href="/profile">
+                    <img src="/icons/account--white.png">
+                </a>
+            </header>
+            <div class="menu__content">
+                <a href="/dashboard" class="menu__link menu__link--active">Dashboard</a>
+                <a href="/settings" class="menu__link">Indstillinger</a>
+            </div>
+        </nav>
+        <main>
+            <div class="dashboard">
+                <div class="dashboard__greeting">Lad os få givet det en skalle, Niels! 💪</div>
+                <div class="card">Find medlem:</div>
+                <div class="card dashboard-slot--height-4"></div>
+                <div class="card dashboard-slot--height-6"></div>
+                <div class="card dashboard-slot--height-8"></div>
+                <div class="card dashboard-slot--height-2"></div>
+                <div class="card dashboard-slot--height-4"></div>
+                <div class="card dashboard-slot--height-4"></div>
+                <div class="card dashboard-slot--height-4"></div>
+            </div>
+        </main>
+        <script>
+            // Variation on color change script that keeps us always close to current association
+            (function() {
+                var root = document.querySelector(":root");
+                var currentAssociation = "dds";
+                var associationColor = "var(--" + currentAssociation + "-color)";
+                var associations = [ "dds", "kfum", "dgp" ];
+
+                // Do a color change now, then one every x time
+                setTimeout(changeColor, 1);
+                setInterval(changeColor, 10 * 1000);
+
+                function changeColor() {
+                    var randomIndex = Math.round(Math.random() * (associations.length - 1));
+                    console.log("ri", randomIndex, associations.length);
+                    var randomAssociation = associations[randomIndex];
+
+                    var newColor = "var(--" + randomAssociation + "-color)";
+                    root.style.setProperty("--theme-color", newColor);
+
+                    setTimeout(function() {
+                        root.style.setProperty("--theme-color", associationColor);
+                    }, 6 * 1000);
+                }
+            })();
+        </script>
+    </body>
+</html>

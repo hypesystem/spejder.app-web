@@ -1,0 +1,297 @@
+:root {
+    --dds-color: #003366;
+    --kfum-color: #2a8862;
+    --dgp-color: #008060;
+    --theme-color: var(--dds-color);
+}
+.theme-text-color {
+    color: var(--theme-color);
+    transition: color 35s;
+}
+.theme-background-color {
+    background-color: var(--theme-color);
+    transition: background-color 35s;
+    color: white;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    box-shadow: 1px 0 1px white;
+    width: 100%;
+    z-index: 100;
+}
+header .logo {
+    font-size: 1rem;
+    color: #e8e8e8;
+    text-decoration: inherit;
+    padding: 1.2em;
+    margin-left: 15px;
+    font-weight: 600;
+}
+header nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+@media (max-width: 400px) {
+    header:after {
+        left: 15px;
+        right: 15px;
+    }
+    header .logo {
+        margin-left: 0;
+    }
+    header nav {
+        margin-right: 0;
+    }
+}
+header nav a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1.2em;
+    box-sizing: border-box;
+}
+
+main.pitch-page {
+    width: 100%;
+    padding: 75px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+section.column {
+    margin: 30px;
+    flex-basis: 50%;
+    max-width: 700px;
+}
+@media (max-width: 800px) {
+    main.pitch-page {
+        flex-wrap: wrap;
+    }
+    section.column {
+        flex-basis: 100%;
+    }
+}
+@media (max-width: 400px) {
+    section.column {
+        margin: 15px;
+    }
+}
+
+section.attention-grab {
+    position: relative;
+    top: -10px;
+}
+section.attention-grab h1 {
+    font-size: 8.5em;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 4.25rem;
+    line-height: 1;
+}
+section.attention-grab h2 {
+    font-weight: 400;
+    width: 70%;
+}
+section.attention-grab p {
+    width: 70%;
+}
+a {
+    color: inherit;
+}
+section.content {
+    width: 70%;
+    margin: 25px 0;
+}
+section.content p {
+    margin: 0 0 1em;
+}
+section.content h1 {
+    margin: 3em 0 1em;
+}
+@media (max-width: 1130px) {
+    section.attention-grab h2 {
+        width: 100%;
+    }
+    section.attention-grab p {
+        width: 90%;
+    }
+    section.content {
+        width: 90%;
+    }
+}
+@media (max-width: 800px) {
+    section.attention-grab h2 {
+        width: 70%;
+    }
+    section.attention-grab p {
+        width: 70%;
+    }
+    section.content {
+        width: 70%;
+    }
+}
+@media (max-width: 600px) {
+    section.attention-grab h2 {
+        width: 100%;
+    }
+    section.attention-grab p {
+        width: 90%;
+    }
+    section.content {
+        width: 90%;
+    }
+}
+@media (max-width: 450px) {
+    section.attention-grab p {
+        width: 100%;
+    }
+    section.content {
+        width: 100%;
+    }
+}
+
+footer {
+    color: black;
+    padding: 15px;
+    font-size: 0.8em;
+}
+
+.spejder-app {
+    display: grid;
+    grid-template-columns: 275px 1fr;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.spejder-app * {
+    box-sizing: border-box;
+}
+.menu {
+    background: white;
+    color: rgb(70, 70, 70);
+    grid-column: 1/2;
+    align-self: start;
+    height: 100%;
+    box-shadow: 0 0 1px rgba(0,0,0,0.05), 0 0 6px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+.menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 1px 6px rgba(0,0,0,0.4);
+}
+
+.menu__header-link img {
+    width: 2rem;
+    height: 3rem;
+    padding: 0.5rem 0;
+}
+.menu__header-link {
+    font-size: 0.875rem;
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    transition: background-color 0.1s;
+}
+.menu__header-link:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.menu__content {
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__link {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    text-decoration: inherit;
+    color: inherit;
+    font-weight: 400;
+    transition: background-color 0.1s;
+}
+.menu__link:hover:not(.menu__link--active) {
+    background: rgba(0,0,0,0.025);
+    box-shadow: 0 0 2px rgba(0,0,0,0.05) inset;
+}
+.menu__link--active {
+    background: rgba(0,0,0,0.025);
+    box-shadow: 0 0 2px rgba(0,0,0,0.05) inset;
+    border-right: 3px solid var(--theme-color);
+    transition: border-color 35s;
+    color: rgb(10, 10, 10);
+}
+
+.spejder-app main {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    align-self: start;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 3.5rem;
+    max-width: calc(1000px + 6rem);
+    grid-gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.dashboard__greeting {
+    font-size: 1.5rem;
+    grid-column: span 2;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.dashboard-slot--height-2 {
+    grid-row: span 2;
+}
+.dashboard-slot--height-4 {
+    grid-row: span 4;
+}
+.dashboard-slot--height-6 {
+    grid-row: span 6;
+}
+.dashboard-slot--height-8 {
+    grid-row: span 8;
+}
+.dashboard-slot--height-10 {
+    grid-row: span 10;
+}
+.dashboard-slot--height-12 {
+    grid-row: span 12;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 0 1px rgba(0,0,0,0.05), 0 0 6px rgba(0,0,0,0.2);
+    padding: 1rem;
+}
