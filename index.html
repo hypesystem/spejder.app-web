@@ -12,11 +12,17 @@
                 --dgp-color: #008060;
                 --theme-color: var(--dds-color);
             }
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-                background: var(--theme-color);
+            .theme-text-color {
+                color: var(--theme-color);
+                transition: color 35s;
+            }
+            .theme-background-color {
+                background-color: var(--theme-color);
                 transition: background-color 35s;
                 color: white;
+            }
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
                 margin: 0;
                 display: flex;
                 flex-direction: column;
@@ -168,16 +174,17 @@
             }
 
             footer {
+                color: black;
                 padding: 15px;
                 font-size: 0.8em;
             }
         </style>
     </head>
     <body>
-        <header>
+        <header class="theme-background-color">
             <a href="/" class="logo">Spejder.app</a>
         </header>
-        <main class="pitch-page">
+        <main class="pitch-page theme-background-color">
             <section class="column">
                 <section class="attention-grab">
                     <h1>Mere tid til det vigtige</h1>
